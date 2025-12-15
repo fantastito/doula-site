@@ -1,0 +1,14 @@
+Title: Jeanne's Doula page
+---
+<h1>@Document.GetString("Title")</h1>
+
+<p>This is a Razor page with some basic HTML.</p>
+
+<p>The current date is: @DateTime.Now.ToString("yyyy-MM-dd")</p>
+
+<ul>
+    @for (int i = 1; i <= 5; i++)
+    {
+        <li>Item @i</li>
+    }
+</ul>
