@@ -1,14 +1,76 @@
-Title: Jeanne's Doula page
 ---
-<h1>@Document.GetString("Title")</h1>
+Title: Birth & Beyond Doula Services
+Layout: _Layout
+---
 
-<p>This is a Razor page with some basic HTML.</p>
+<header>
+    <div class="container">
+        <h1>Birth & Beyond</h1>
+        <p class="tagline">Compassionate support through your journey into parenthood</p>
+        <a href="#contact" class="cta-button">Get in Touch</a>
+    </div>
+</header>
 
-<p>The current date is: @DateTime.Now.ToString("yyyy-MM-dd")</p>
+<section class="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-image">🤱</div>
+            <div>
+                <h2>Supporting You Through Birth</h2>
+                <p>Every birth journey is unique and deserves personalized care. As a certified doula, I provide continuous physical, emotional, and informational support to help you navigate pregnancy, birth, and the early postpartum period.</p>
+                <p>My approach is centered on your needs, preferences, and comfort. Together, we'll create a birth experience that honors your choices and empowers you through one of life's most transformative moments.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-<ul>
-    @for (int i = 1; i <= 5; i++)
-    {
-        <li>Item @i</li>
-    }
-</ul>
+<section class="services">
+    <div class="container">
+        <h2>Services Offered</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <span class="service-icon">🌸</span>
+                <h3>Prenatal Support</h3>
+                <p>Regular meetings to prepare for birth, discuss your birth plan, and address any concerns or questions you may have.</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">💫</span>
+                <h3>Birth Attendance</h3>
+                <p>Continuous support during labor and delivery, including comfort measures, position suggestions, and advocacy.</p>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🌿</span>
+                <h3>Postpartum Care</h3>
+                <p>Follow-up visits to support your recovery, breastfeeding journey, and adjustment to life with your new baby.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <div class="container">
+        <h2>What Families Say</h2>
+        <div class="testimonial-card">
+            <p class="testimonial-text">Having her by our side made all the difference. She provided calm, reassuring support exactly when we needed it most. We couldn't have asked for a better birth experience.</p>
+            <p class="testimonial-author">— Sarah & Michael</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="container">
+        <h2>Let's Connect</h2>
+        <p>I'd love to hear from you and learn about your birth journey. Reach out to schedule a free consultation and see if we're a good fit.</p>
+        <a href="mailto:hello@birthandbeyond.com" class="cta-button">Email Me</a>
+        <div class="contact-info">
+            <div class="contact-item">
+                <strong>Email</strong>
+                <a href="mailto:hello@birthandbeyond.com">hello@birthandbeyond.com</a>
+            </div>
+            <div class="contact-item">
+                <strong>Phone</strong>
+                <a href="tel:5551234567">(555) 123-4567</a>
+            </div>
+        </div>
+    </div>
+</section>

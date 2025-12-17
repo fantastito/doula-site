@@ -3,7 +3,7 @@ using Statiq.App;
 using Statiq.Web;
 using Statiq.Images;
 
-namespace MySite
+namespace DoulaSite
 {
   public class Program
   {
