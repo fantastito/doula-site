@@ -1,0 +1,202 @@
+{
+  "languages": {
+    "en": {
+      "langName": "English",
+      "meta": {
+        "title": "Birth & Beyond Doula Services",
+        "description": "Compassionate doula support through pregnancy, birth, and postpartum."
+      },
+      "header": {
+        "title": "Birth & Beyond",
+        "tagline": "Compassionate support through your journey into parenthood",
+        "ctaText": "Get in Touch"
+      },
+      "about": {
+        "icon": "🤱",
+        "heading": "Supporting You Through Birth",
+        "paragraphs": [
+          "Every birth journey is unique and deserves personalized care. As a certified doula, I provide continuous physical, emotional, and informational support to help you navigate pregnancy, birth, and the early postpartum period.",
+          "My approach is centered on your needs, preferences, and comfort. Together, we'll create a birth experience that honors your choices and empowers you through one of life's most transformative moments."
+        ]
+      },
+      "services": {
+        "heading": "Services Offered",
+        "items": [
+          {
+            "icon": "🌸",
+            "title": "Prenatal Support",
+            "description": "Regular meetings to prepare for birth, discuss your birth plan, and address any concerns or questions you may have."
+          },
+          {
+            "icon": "💫",
+            "title": "Birth Attendance",
+            "description": "Continuous support during labor and delivery, including comfort measures, position suggestions, and advocacy."
+          },
+          {
+            "icon": "🌿",
+            "title": "Postpartum Care",
+            "description": "Follow-up visits to support your recovery, breastfeeding journey, and adjustment to life with your new baby."
+          }
+        ]
+      },
+      "testimonials": {
+        "heading": "What Families Say",
+        "items": [
+          {
+            "text": "Having her by our side made all the difference. She provided calm, reassuring support exactly when we needed it most. We couldn't have asked for a better birth experience.",
+            "author": "Sarah & Michael"
+          }
+        ]
+      },
+      "contact": {
+        "heading": "Let's Connect",
+        "intro": "I'd love to hear from you and learn about your birth journey. Reach out to schedule a free consultation and see if we're a good fit.",
+        "ctaText": "Email Me",
+        "email": {
+          "label": "Email",
+          "value": "hello@birthandbeyond.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "value": "(555) 123-4567",
+          "tel": "5551234567"
+        }
+      },
+      "footer": {
+        "copyright": "Birth & Beyond Doula Services. All rights reserved."
+      }
+    },
+    "fr": {
+      "langName": "Français",
+      "meta": {
+        "title": "Services de Doula Birth & Beyond",
+        "description": "Accompagnement compassionnel pendant la grossesse, l'accouchement et le post-partum."
+      },
+      "header": {
+        "title": "Birth & Beyond",
+        "tagline": "Un accompagnement bienveillant tout au long de votre parcours vers la parentalité",
+        "ctaText": "Contactez-moi"
+      },
+      "about": {
+        "icon": "🤱",
+        "heading": "Vous accompagner pendant l'accouchement",
+        "paragraphs": [
+          "Chaque parcours de naissance est unique et mérite des soins personnalisés. En tant que doula certifiée, je vous offre un soutien physique, émotionnel et informatif continu pour vous guider pendant la grossesse, l'accouchement et la période post-partum.",
+          "Mon approche est centrée sur vos besoins, vos préférences et votre confort. Ensemble, nous créerons une expérience de naissance qui honore vos choix et vous donne du pouvoir pendant l'un des moments les plus transformateurs de votre vie."
+        ]
+      },
+      "services": {
+        "heading": "Services Offerts",
+        "items": [
+          {
+            "icon": "🌸",
+            "title": "Soutien Prénatal",
+            "description": "Rencontres régulières pour préparer l'accouchement, discuter de votre plan de naissance et répondre à toutes vos questions ou préoccupations."
+          },
+          {
+            "icon": "💫",
+            "title": "Présence à l'Accouchement",
+            "description": "Soutien continu pendant le travail et l'accouchement, incluant des mesures de confort, des suggestions de positions et du plaidoyer."
+          },
+          {
+            "icon": "🌿",
+            "title": "Soins Post-Partum",
+            "description": "Visites de suivi pour soutenir votre récupération, votre parcours d'allaitement et votre adaptation à la vie avec votre nouveau bébé."
+          }
+        ]
+      },
+      "testimonials": {
+        "heading": "Ce Que Disent Les Familles",
+        "items": [
+          {
+            "text": "L'avoir à nos côtés a fait toute la différence. Elle a fourni un soutien calme et rassurant exactement quand nous en avions le plus besoin. Nous n'aurions pas pu demander une meilleure expérience d'accouchement.",
+            "author": "Sarah & Michael"
+          }
+        ]
+      },
+      "contact": {
+        "heading": "Restons en Contact",
+        "intro": "J'aimerais beaucoup vous entendre et en savoir plus sur votre parcours de naissance. Contactez-moi pour planifier une consultation gratuite et voir si nous sommes compatibles.",
+        "ctaText": "Envoyez-moi un Email",
+        "email": {
+          "label": "Email",
+          "value": "hello@birthandbeyond.com"
+        },
+        "phone": {
+          "label": "Téléphone",
+          "value": "(555) 123-4567",
+          "tel": "5551234567"
+        }
+      },
+      "footer": {
+        "copyright": "Birth & Beyond Services de Doula. Tous droits réservés."
+      }
+    },
+    "it": {
+      "langName": "Italiano",
+      "meta": {
+        "title": "Servizi Doula Birth & Beyond",
+        "description": "Supporto compassionevole durante la gravidanza, il parto e il post-parto."
+      },
+      "header": {
+        "title": "Birth & Beyond",
+        "tagline": "Supporto compassionevole durante il tuo viaggio verso la genitorialità",
+        "ctaText": "Contattami"
+      },
+      "about": {
+        "icon": "🤱",
+        "heading": "Supporto Durante il Parto",
+        "paragraphs": [
+          "Ogni percorso di nascita è unico e merita cure personalizzate. Come doula certificata, fornisco supporto fisico, emotivo e informativo continuo per aiutarti a navigare la gravidanza, il parto e il periodo post-parto.",
+          "Il mio approccio è centrato sulle tue esigenze, preferenze e comfort. Insieme, creeremo un'esperienza di nascita che onora le tue scelte e ti dà forza durante uno dei momenti più trasformativi della vita."
+        ]
+      },
+      "services": {
+        "heading": "Servizi Offerti",
+        "items": [
+          {
+            "icon": "🌸",
+            "title": "Supporto Prenatale",
+            "description": "Incontri regolari per prepararsi al parto, discutere il tuo piano di nascita e affrontare eventuali dubbi o domande."
+          },
+          {
+            "icon": "💫",
+            "title": "Presenza al Parto",
+            "description": "Supporto continuo durante il travaglio e il parto, incluse misure di comfort, suggerimenti sulle posizioni e advocacy."
+          },
+          {
+            "icon": "🌿",
+            "title": "Cura Post-Parto",
+            "description": "Visite di follow-up per supportare il tuo recupero, il percorso di allattamento e l'adattamento alla vita con il tuo nuovo bambino."
+          }
+        ]
+      },
+      "testimonials": {
+        "heading": "Cosa Dicono Le Famiglie",
+        "items": [
+          {
+            "text": "Averla al nostro fianco ha fatto tutta la differenza. Ha fornito un supporto calmo e rassicurante esattamente quando ne avevamo più bisogno. Non avremmo potuto chiedere un'esperienza di nascita migliore.",
+            "author": "Sarah & Michael"
+          }
+        ]
+      },
+      "contact": {
+        "heading": "Mettiamoci in Contatto",
+        "intro": "Mi piacerebbe sentirti e conoscere il tuo percorso di nascita. Contattami per programmare una consulenza gratuita e vedere se siamo compatibili.",
+        "ctaText": "Inviami una Email",
+        "email": {
+          "label": "Email",
+          "value": "hello@birthandbeyond.com"
+        },
+        "phone": {
+          "label": "Telefono",
+          "value": "(555) 123-4567",
+          "tel": "5551234567"
+        }
+      },
+      "footer": {
+        "copyright": "Birth & Beyond Servizi Doula. Tutti i diritti riservati."
+      }
+    }
+  }
+}

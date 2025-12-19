@@ -1,24 +1,39 @@
 ---
-Title: Birth & Beyond Doula Services
 Layout: _Layout
+Language: en
 ---
+@{
+    var lang = Outputs
+        .FromPipeline("Data")
+        .First(x => x.Source.FileName == "content.json")
+        .GetDocument("languages")
+        .GetDocument("en");
+
+    var header = lang.GetDocument("header");
+    var about = lang.GetDocument("about");
+    var services = lang.GetDocument("services");
+    var testimonials = lang.GetDocument("testimonials");
+    var contact = lang.GetDocument("contact");
+}
 
 <header>
     <div class="container">
-        <h1>Birth & Beyond</h1>
-        <p class="tagline">Compassionate support through your journey into parenthood</p>
-        <a href="#contact" class="cta-button">Get in Touch</a>
+        <h1>@header.GetString("title")</h1>
+        <p class="tagline">@header.GetString("tagline")</p>
+        <a href="#contact" class="cta-button">@header.GetString("ctaText")</a>
     </div>
 </header>
 
 <section class="about">
     <div class="container">
         <div class="about-content">
-            <div class="about-image">🤱</div>
+            <div class="about-image">@about.GetString("icon")</div>
             <div>
-                <h2>Supporting You Through Birth</h2>
-                <p>Every birth journey is unique and deserves personalized care. As a certified doula, I provide continuous physical, emotional, and informational support to help you navigate pregnancy, birth, and the early postpartum period.</p>
-                <p>My approach is centered on your needs, preferences, and comfort. Together, we'll create a birth experience that honors your choices and empowers you through one of life's most transformative moments.</p>
+                <h2>@about.GetString("heading")</h2>
+                @foreach (var paragraph in about.GetList<string>("paragraphs"))
+                {
+                    <p>@paragraph</p>
+                }
             </div>
         </div>
     </div>
@@ -26,50 +41,52 @@ Layout: _Layout
 
 <section class="services">
     <div class="container">
-        <h2>Services Offered</h2>
+        <h2>@services.GetString("heading")</h2>
         <div class="service-grid">
-            <div class="service-card">
-                <span class="service-icon">🌸</span>
-                <h3>Prenatal Support</h3>
-                <p>Regular meetings to prepare for birth, discuss your birth plan, and address any concerns or questions you may have.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">💫</span>
-                <h3>Birth Attendance</h3>
-                <p>Continuous support during labor and delivery, including comfort measures, position suggestions, and advocacy.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">🌿</span>
-                <h3>Postpartum Care</h3>
-                <p>Follow-up visits to support your recovery, breastfeeding journey, and adjustment to life with your new baby.</p>
-            </div>
+            @foreach (var item in services.GetList<IDocument>("items"))
+            {
+                <div class="service-card">
+                    <span class="service-icon">@item.GetString("icon")</span>
+                    <h3>@item.GetString("title")</h3>
+                    <p>@item.GetString("description")</p>
+                </div>
+            }
         </div>
     </div>
 </section>
 
 <section class="testimonials">
     <div class="container">
-        <h2>What Families Say</h2>
-        <div class="testimonial-card">
-            <p class="testimonial-text">Having her by our side made all the difference. She provided calm, reassuring support exactly when we needed it most. We couldn't have asked for a better birth experience.</p>
-            <p class="testimonial-author">— Sarah & Michael</p>
-        </div>
+        <h2>@testimonials.GetString("heading")</h2>
+        @foreach (var item in testimonials.GetList<IDocument>("items"))
+        {
+            <div class="testimonial-card">
+                <p class="testimonial-text">@item.GetString("text")</p>
+                <p class="testimonial-author">— @item.GetString("author")</p>
+            </div>
+        }
     </div>
 </section>
 
 <section class="contact" id="contact">
     <div class="container">
-        <h2>Let's Connect</h2>
-        <p>I'd love to hear from you and learn about your birth journey. Reach out to schedule a free consultation and see if we're a good fit.</p>
-        <a href="mailto:hello@birthandbeyond.com" class="cta-button">Email Me</a>
+        <h2>@contact.GetString("heading")</h2>
+        <p>@contact.GetString("intro")</p>
+        <a href="mailto:@contact.GetDocument("email").GetString("value") class="cta-button">
+            @contact.GetString("ctaText")
+        </a>
         <div class="contact-info">
             <div class="contact-item">
-                <strong>Email</strong>
-                <a href="mailto:hello@birthandbeyond.com">hello@birthandbeyond.com</a>
+                <strong>@contact.GetDocument("email").GetString("label")</strong>
+                <a href="mailto:@contact.GetDocument("email").GetString("value")">
+                    @contact.GetDocument("email").GetString("value")
+                </a>
             </div>
             <div class="contact-item">
-                <strong>Phone</strong>
-                <a href="tel:5551234567">(555) 123-4567</a>
+                <strong>@contact.GetDocument("phone").GetString("label")</strong>
+                <a href="tel:@contact.GetDocument("phone").GetString("tel")">
+                    @contact.GetDocument("phone").GetString("value")
+                </a>
             </div>
         </div>
     </div>

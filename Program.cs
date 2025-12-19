@@ -11,7 +11,7 @@ namespace DoulaSite
       await Bootstrapper
         .Factory
         .CreateWeb(args)
-                .BuildPipeline("ResizeImages", builder =>
+            .BuildPipeline("ResizeImages", builder =>
             {
                 builder.WithInputReadFiles("assets/images/*.{jpg,png,gif}");
                 builder.WithInputModules(new MutateImage()
