@@ -1,0 +1,428 @@
+/* CSS Variables - Brand Palette */
+:root {
+    --color-earth: #C9897A;
+    --color-cream: #E8D5BC;
+    --color-off-white: #F5EDEO;
+    --color-beige: #C4956A;
+    --color-dark: #2a2420;
+    --color-light: #faf8f6;
+    --color-bg-alt: #ebe5e0;
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Georgia', 'Garamond', serif;
+    line-height: 1.7;
+    color: var(--color-dark);
+    background-color: var(--color-off-white);
+    font-size: 16px;
+}
+
+/* Typography */
+h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--color-beige);
+    margin: 0 0 2rem 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-beige);
+    margin: 0.75rem 0 0.25rem 0;
+    line-height: 1.2;
+}
+
+.services h3 {
+    margin: 0 0 0.25rem 0;
+}
+
+.services h3 + p {
+    margin: 0 0 2rem 0;
+}
+
+/* Tighten spacing in simple list sections */
+section h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+section h3 + p {
+    margin-bottom: 1.5rem;
+}
+
+p {
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+strong {
+    color: var(--color-beige);
+    font-weight: 600;
+}
+
+em {
+    font-style: italic;
+    color: var(--color-earth);
+}
+
+/* Links */
+a {
+    color: var(--color-beige);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-cream);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-earth);
+    border-bottom-color: var(--color-earth);
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 14px 36px;
+    margin: 2rem 0 0 0;
+    background-color: var(--color-beige);
+    color: var(--color-off-white);
+    border: 2px solid var(--color-beige);
+    border-radius: 8px;
+    font-family: 'Georgia', serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    color: var(--color-beige);
+    border-color: var(--color-beige);
+}
+
+/* Hero Section - Full Screen */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--color-off-white) 0%, var(--color-cream) 100%);
+    padding: 4rem 2rem;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.hero h1 {
+    margin-bottom: 0.75rem;
+}
+
+.hero .subtitle {
+    font-size: 1.4rem;
+    color: var(--color-earth);
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+
+/* Services List in Hero */
+.hero-services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 900px;
+    justify-self: center;
+}
+
+.hero-service-item {
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-top: 3px solid var(--color-beige);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.hero-service-item:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-top-color: var(--color-earth);
+}
+
+.hero-service-item strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--color-beige);
+}
+
+.hero-service-item span {
+    display: none;
+}
+
+/* Full-width Background Wrapper */
+.full-width-bg {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-color: var(--color-bg-alt);
+    padding: 0;
+}
+
+.full-width-bg section.section-content {
+    margin: 0 auto;
+    padding: 6rem 2rem;
+}
+
+/* Full-screen Sections */
+section {
+    min-height: auto;
+    max-width: 100%;
+}
+
+section:not(.full-width-bg section) {
+    padding: 6rem 2rem;
+}
+
+section:nth-child(odd) {
+    background-color: var(--color-off-white);
+}
+
+.section-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+}
+
+.full-width-bg .section-content {
+    padding: 6rem 2rem;
+}
+
+section h2 {
+    margin-bottom: 2rem;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--color-cream);
+    margin: 3rem 0;
+}
+
+/* Lists */
+ul {
+    margin: 1.5rem 0 1.5rem 2rem;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+/* Service Cards */
+.services {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.services > h3 {
+    padding: 1.5rem;
+    margin: 0;
+    background-color: rgba(201, 137, 122, 0.08);
+    border-left: 4px solid var(--color-beige);
+    color: var(--color-beige);
+    transition: all 0.3s ease;
+}
+
+.services > h3:hover {
+    border-left-color: var(--color-earth);
+    background-color: rgba(201, 137, 122, 0.15);
+    transform: translateY(-2px);
+}
+
+.services > h3 + p {
+    margin: -1.5rem 0 2rem 0;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    background-color: rgba(201, 137, 122, 0.02);
+    border-left: 4px solid var(--color-beige);
+}
+
+.service {
+    padding: 2rem;
+    border-left: 4px solid var(--color-beige);
+    background-color: rgba(201, 137, 122, 0.08);
+    transition: all 0.3s ease;
+}
+
+.service:hover {
+    border-left-color: var(--color-earth);
+    background-color: rgba(201, 137, 122, 0.15);
+    transform: translateY(-4px);
+}
+
+.service h3 {
+    margin-top: 0;
+    color: var(--color-beige);
+    margin-bottom: 0.75rem;
+}
+
+.service p {
+    margin-bottom: 0;
+    color: var(--color-dark);
+}
+
+/* Single Testimonial */
+.testimonial-single {
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, rgba(201, 137, 122, 0.1) 0%, rgba(196, 149, 106, 0.05) 100%);
+    border-left: 5px solid var(--color-beige);
+    border-radius: 8px;
+    line-height: 1.9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.testimonial-single p {
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    color: var(--color-dark);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.testimonial-single strong {
+    display: block;
+    margin-top: 1.5rem;
+    font-style: normal;
+    color: var(--color-beige);
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Contact Section */
+.contact-section section {
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 3rem;
+}
+
+/* Contact Methods */
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-methods .cta-button {
+    margin: 0;
+    width: 100%;
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--color-cream);
+    padding: 3rem 2rem;
+    text-align: center;
+    min-height: auto;
+}
+
+footer p {
+    font-style: italic;
+    color: var(--color-earth);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.content {
+    width: 100%;
+    padding: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        letter-spacing: 1.5px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .hero {
+        min-height: 80vh;
+        padding: 2rem 1.5rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.1rem;
+    }
+
+    section {
+        padding: 4rem 1.5rem;
+    }
+
+    .hero-services {
+        grid-template-columns: 1fr;
+        margin-top: 2rem;
+    }
+
+    .service {
+        padding: 1.5rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: fadeIn 0.8s ease-out;
+}
+
+section {
+    animation: fadeIn 0.6s ease-out;
+}

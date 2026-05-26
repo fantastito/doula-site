@@ -5,7 +5,7 @@ Layout: _Layout.cshtml
 
 <section class="section-content">
 
-## NOTRE HISTOIRE
+## DEM A CA: où tout commence
 
 Une philosophie simple : le corps des femmes est un lieu possible d'émancipation.
 
@@ -19,30 +19,28 @@ La maternité ne doit pas être une limitation, mais une puissance. Je vous acco
 
 </section>
 
+<div class="full-width-bg">
 <section class="section-content">
 
-## MES SERVICES
-
-<div class="services">
-
+## NAÎTRE ENSEMBLE
+ 
 ### Accompagnement prénatal
 Se préparer ensemble, écouter votre corps, explorer vos ressources.
-
+ 
 ### Présence à l'accouchement
 Être là, près de vous, pour vous soutenir et vous rappeler votre force.
-
+ 
 ### Accompagnement postnatal
 Vous entourer dans cette transition, prendre soin de vous qui prenez soin.
-
+ 
 ### Massage prénatal
 Honorer votre corps qui se transforme.
-
+ 
 ### Massage bébé
 Un langage du toucher, une connexion douce.
-
-</div>
-
+ 
 </section>
+</div>
 
 <section class="section-content">
 
@@ -54,20 +52,20 @@ Parce que parfois, être une femme forte, c'est juste être forte — pas seule,
 
 </section>
 
+<div class="full-width-bg">
 <section class="section-content">
 
 ## TÉMOIGNAGES
+ 
+<div class="testimonial-single">
 
-*Espace pour les témoignages des clientes*
+*"Elle a su créer un espace de confiance dès notre première rencontre. Son accompagnement m'a permis de redécouvrir ma force pendant la grossesse et d'arriver à l'accouchement en paix avec mon corps. Je suis infiniment reconnaissante."*
+ 
+**— Marie, mère de deux enfants**
+ 
 
+</div>
 </section>
-
-<section class="section-content" id="contact">
-
-## CONTACT
-
-**Besoin de précision ? Envie de discuter de votre accompagnement ?**
-
-[Formulaire de contact / Email / Téléphone]
-
+</div>
 </section>
+</div>
