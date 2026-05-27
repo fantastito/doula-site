@@ -1,22 +1,18 @@
 targetScope = 'resourceGroup'
 
 param location string = 'belgiumcentral'
+param staticSiteName string = 'demaca'
 
 resource staticSite 'Microsoft.Web/staticSites@2023-12-01' = {
-  name: 'demaca'
+  name: staticSiteName
   location: location
+
   sku: {
     name: 'Free'
     tier: 'Free'
   }
-  properties: {
-    repositoryUrl: 'https://github.com/fantastito/doula-site'
-    branch: 'main'
-    buildProperties: {
-      appLocation: '/'
-      outputLocation: 'output'
-    }
-  }
+
+  properties: {}
 }
 
 output staticSiteName string = staticSite.name
