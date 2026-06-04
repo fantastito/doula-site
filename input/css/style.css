@@ -153,6 +153,12 @@ a:hover {
     margin-bottom: 2rem;
 }
 
+.hero-logo {
+    width: 320px;
+    max-width: 80vw;
+    margin-bottom: 2.5rem;
+}
+
 /* Services List in Hero */
 .hero-services {
     display: grid;
@@ -184,6 +190,11 @@ a:hover {
 
 .hero-service-item span {
     display: none;
+}
+
+.hero-services {
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 2rem;
 }
 
 /* Full-width Background Wrapper */
@@ -399,8 +410,7 @@ footer p {
     }
 
     .hero-services {
-        grid-template-columns: 1fr;
-        margin-top: 2rem;
+        grid-template-columns: repeat(2, 1fr); /* 2x2 on mobile rather than a long stack */
     }
 
     .service {
