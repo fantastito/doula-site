@@ -6,6 +6,7 @@ on:
       - main
 
   pull_request:
+    types: [opened, synchronize, reopened, closed]
     branches:
       - main
 
@@ -14,14 +15,17 @@ permissions:
   contents: read
 
 jobs:
+  # ── PR: build preview & deploy staging environment ──────────────────────────
   build-preview:
-    name: Build Preview (PR only)
-    if: github.event_name == 'pull_request'
+    name: Build & Deploy Preview (PR)
+    if: github.event_name == 'pull_request' && github.event.action != 'closed'
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+          lfs: false
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -34,38 +38,40 @@ jobs:
       - name: Build Statiq site
         run: dotnet run --project ./doula_site.csproj
 
-  deploy-infra:
-    name: Deploy Infrastructure (Bicep)
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Azure Login
-        uses: azure/login@v2
+      - name: Deploy preview to Azure Static Web Apps
+        uses: Azure/static-web-apps-deploy@v1
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GRAY_STONE_01C726B03 }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: upload
+          app_location: "output"
+          output_location: ""
+          skip_app_build: true
 
-      - name: Deploy Bicep
-        run: |
-          az deployment group create \
-            --resource-group demaca-belgiumcentral-rg \
-            --template-file infra/main.bicep \
-            --parameters staticSiteName=demaca
-
-  deploy-site:
-    name: Build & Deploy (Production)
-    if: github.ref == 'refs/heads/main'
+  # ── PR closed: tear down staging environment ─────────────────────────────────
+  close-preview:
+    name: Close Preview Environment (PR closed)
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
-    needs: deploy-infra
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - name: Close Pull Request
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GRAY_STONE_01C726B03 }}
+          action: close
+
+  # ── main: build site & deploy to production ───────────────────────────────────
+  deploy-site:
+    name: Build & Deploy Production
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+          lfs: false
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -81,8 +87,9 @@ jobs:
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GRAY_STONE_01C726B03 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: upload
-          app_location: "/"
-          output_location: "output"
+          app_location: "output"
+          output_location: ""
+          skip_app_build: true
