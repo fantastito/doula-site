@@ -32,17 +32,21 @@ Pas de pression implicite. Pas de bonne ni unique façon de naître, rien à att
  
 </section>
 
+
 <div class="full-width-bg">
-<section class="section-content">
+<section class="section-with-image">
+<img src="/assets/images/giraffe.jpeg" alt="Jeanne" class="section-image">
+<div class="section-image-content">
 
-## QUI SUIS-JE ?
-
+## Qui suis-je ?
+ 
 Je suis Jeanne — doula, ancienne défenseure des droits des femmes dans les politiques européennes, et maman.
  
 Petite, j'avais créé une société des filles dans la cabane de notre jardin. Je n'ai jamais cessé de croire en la puissance des femmes ensemble. Aujourd'hui, je mets cette conviction au service de ce moment singulier que vous traversez.
  
 [En savoir plus sur moi](/je-suis-jeanne)
-
+ 
+</div>
 </section>
 </div>
 
@@ -59,7 +63,7 @@ J'accompagne en français, anglais, espagnol et italien.
  
 </section>
 
-<div class="full-width-bg">
+<div class="testimonial-bg" style="background-image: url('/assets/images/giraffe.jpeg')">
 <section class="section-content">
 
 ## TÉMOIGNAGES

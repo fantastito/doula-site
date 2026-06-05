@@ -310,7 +310,7 @@ li {
 /* Single Testimonial */
 .testimonial-single {
     padding: 2.5rem 2rem;
-    background: linear-gradient(135deg, rgba(201, 137, 122, 0.1) 0%, rgba(196, 149, 106, 0.05) 100%);
+    background-color: var(--color-light);
     border-left: 5px solid var(--color-beige);
     border-radius: 8px;
     line-height: 1.9;
@@ -318,6 +318,8 @@ li {
     max-width: 600px;
     margin: 2rem auto;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .testimonial-single p {
@@ -335,6 +337,53 @@ li {
     color: var(--color-beige);
     font-size: 0.9rem;
     letter-spacing: 0.5px;
+}
+
+/* Qui suis-je — image left, text right */
+.section-with-image {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+}
+
+.section-image {
+    width: 340px;
+    max-width: 40%;
+    height: 420px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 4px;
+}
+
+.section-image-content {
+    flex: 1;
+}
+
+.section-image-content h2 {
+    margin-top: 0;
+}
+
+/* Témoignages — background image */
+.testimonial-bg {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.testimonial-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(245, 237, 224, 0.82);
+}
+
+.testimonial-bg .section-content {
+    position: relative;
 }
 
 /* Contact Section */
@@ -415,6 +464,17 @@ footer p {
 
     .service {
         padding: 1.5rem;
+    }
+
+    .section-with-image {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .section-image {
+        width: 100%;
+        max-width: 100%;
+        height: 280px;
     }
 }
 
