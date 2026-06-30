@@ -329,7 +329,7 @@ li {
     z-index: 1;
 }
 
-.testimonial-single p {
+.testimonial-single p em {
     margin-bottom: 1.5rem;
     font-style: italic;
     color: var(--color-dark);
