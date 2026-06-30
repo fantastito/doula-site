@@ -35,7 +35,7 @@ Pas de pression implicite. Pas de bonne ni unique façon de naître, rien à att
 
 <div class="full-width-bg">
 <section class="section-with-image">
-<img src="/assets/images/giraffe.jpeg" alt="Jeanne" class="section-image">
+<img src="/assets/images/jeanne_1.jpeg" alt="Une photo de Jeanne avec deux enfants" class="section-image">
 <div class="section-image-content">
 
 ## Qui suis-je ?
