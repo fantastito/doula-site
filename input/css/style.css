@@ -4,6 +4,8 @@
     --color-cream: #E8D5BC;
     --color-off-white: #F5EDEO;
     --color-beige: #C4956A;
+    --color-green: #2E8B57;
+    --color-green-dark: #226B42;
     --color-dark: #2a2420;
     --color-light: #faf8f6;
     --color-bg-alt: #ebe5e0;
@@ -80,7 +82,7 @@ p {
 }
 
 strong {
-    color: var(--color-beige);
+    color: var(--color-green);
     font-weight: 600;
 }
 
@@ -91,15 +93,15 @@ em {
 
 /* Links */
 a {
-    color: var(--color-beige);
+    color: var(--color-green);
     text-decoration: none;
     border-bottom: 1px solid var(--color-cream);
     transition: all 0.3s ease;
 }
 
 a:hover {
-    color: var(--color-earth);
-    border-bottom-color: var(--color-earth);
+    color: var(--color-green-dark);
+    border-bottom-color: var(--color-green-dark);
 }
 
 /* CTA Button */
@@ -107,9 +109,9 @@ a:hover {
     display: inline-block;
     padding: 14px 36px;
     margin: 2rem 0 0 0;
-    background-color: var(--color-beige);
+    background-color: var(--color-green);
     color: var(--color-off-white);
-    border: 2px solid var(--color-beige);
+    border: 2px solid var(--color-green);
     border-radius: 8px;
     font-family: 'Georgia', serif;
     font-size: 0.9rem;
@@ -124,8 +126,8 @@ a:hover {
 
 .cta-button:hover {
     background-color: transparent;
-    color: var(--color-beige);
-    border-color: var(--color-beige);
+    color: var(--color-green);
+    border-color: var(--color-green);
 }
 
 /* Hero Section - Full Screen */
@@ -179,7 +181,7 @@ a:hover {
 
 .hero-service-item:hover {
     background-color: rgba(255, 255, 255, 0.9);
-    border-top-color: var(--color-earth);
+    border-top-color: var(--color-green-dark);
 }
 
 .hero-service-item strong {
@@ -334,7 +336,7 @@ li {
     display: block;
     margin-top: 1.5rem;
     font-style: normal;
-    color: var(--color-beige);
+    color: var(--color-green);
     font-size: 0.9rem;
     letter-spacing: 0.5px;
 }
@@ -422,11 +424,22 @@ footer {
 }
 
 footer p {
+    margin: 0 auto 1rem auto;
+    max-width: 700px;
+}
+
+footer p.disclaimer {
     font-style: italic;
     color: var(--color-earth);
-    font-size: 1rem;
-    margin: 0 auto;
-    max-width: 700px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+footer p.copyright {
+    font-style: normal;
+    color: var(--color-green);
+    font-size: 0.8rem;
+    margin-bottom: 0;
 }
 
 .content {

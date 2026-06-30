@@ -40,9 +40,12 @@
     @Html.Partial("_contact-section")
 
     <footer>
-        <p>Pour la belle urgence d'un cœur de mère ❤️🥂☀️</p>
-        <p>Les informations et l’accompagnement proposés sont de nature non médicale. Je ne suis pas médecin, sage-femme ni professionnelle de santé, et mon rôle de doula ne remplace en aucun cas un suivi médical.</p>
-        <p>&copy; @(DateTime.Now.Year) Jeanne Ponté</p>
+        <p class="disclaimer">
+            Les informations et l'accompagnement proposés sont de nature non médicale.
+            Je ne suis pas médecin, sage-femme ni professionnelle de santé, et mon rôle
+            de doula ne remplace en aucun cas un suivi médical.
+        </p>
+        <p class="copyright">&copy; @(DateTime.Now.Year) Jeanne Ponté</p>
     </footer>
 
 </body>
