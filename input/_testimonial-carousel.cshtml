@@ -1,0 +1,35 @@
+@{
+    var doc = Outputs.FromPipeline("Testimonials").FirstOrDefault();
+
+    var testimonials = doc?
+        .GetList("testimonials");
+}
+
+@if (testimonials != null)
+{
+    <div class="testimonial-bg"
+         style="background-image: url('/assets/images/giraffe.jpeg')">
+
+        <section class="section-content">
+
+            <h2>TÉMOIGNAGES</h2>
+
+            <div class="testimonial-single">
+
+                @foreach (var t in testimonials)
+                {
+                    <div class="testimonial-slide">
+
+                        <em>"@t.quote"</em>
+
+                        <br />
+
+                        <strong>— @t.author</strong>
+                    </div>
+                }
+
+            </div>
+
+        </section>
+    </div>
+}

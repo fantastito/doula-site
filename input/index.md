@@ -63,7 +63,7 @@ J'accompagne en 🇫🇷, 🇬🇧, 🇪🇸 et 🇮🇹.
  
 </section>
 
-<div class="testimonial-bg" style="background-image: url('/assets/images/giraffe.jpeg')">
+<!-- <div class="testimonial-bg" style="background-image: url('/assets/images/giraffe.jpeg')">
 <section class="section-content">
 
 ## TÉMOIGNAGES
@@ -77,4 +77,10 @@ J'accompagne en 🇫🇷, 🇬🇧, 🇪🇸 et 🇮🇹.
 </div>
 
 </section>
-</div>
+</div> -->
+
+@await Html.PartialAsync("_testimonial-carousel.cshtml")
+
+@RenderPartial("_testimonial-carousel")
+
+@await RenderPartialAsync("_testimonial-carousel.cshtml")

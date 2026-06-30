@@ -346,6 +346,53 @@ li {
     letter-spacing: 0.5px;
 }
 
+/* testimonial carousel */
+.testimonial-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.testimonial-container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+}
+
+.testimonial-slide {
+    display: none;
+    padding: 2.5rem 2rem;
+    background-color: rgba(255,255,255,0.9);
+    border-left: 5px solid var(--color-primary);
+}
+
+.testimonial-slide.active {
+    display: block;
+}
+
+.testimonial-arrow {
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+}
+
+.testimonial-arrow:hover {
+    opacity: 0.7;
+}
+
+.testimonial-quote {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    text-align: right;
+}
+
 /* Qui suis-je — image left, text right */
 .section-with-image {
     display: flex;
