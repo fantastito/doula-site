@@ -57,7 +57,7 @@ Petite, j'avais créé une société des filles dans la cabane de notre jardin. 
 Accompagnement individuel · Présence à la naissance · Massage rituel · Massage bébé
  
 Je me déplace chez vous, à Bruxelles, à votre rythme.
-J'accompagne en français, anglais, espagnol et italien.
+J'accompagne en 🇫🇷, 🇬🇧, 🇪🇸 et 🇮🇹.
  
 [Découvrir l'accompagnement et les tarifs](/ensemble)
  
